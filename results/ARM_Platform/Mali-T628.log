@@ -1,0 +1,88 @@
+
+Platform: ARM Platform
+  Device: Mali-T628
+    Driver version  : 1.1 (Linux ARM)
+    Compute units   : 4
+    Clock frequency : 600 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 4.34
+      float2  : 6.12
+      float4  : 5.99
+      float8  : 6.32
+      float16 : 5.01
+
+    Single-precision compute (GFLOPS)
+      float   : 2.91
+      float2  : 5.88
+      float4  : 5.86
+      float8  : 7.22
+      float16 : 7.20
+
+    Double-precision compute (GFLOPS)
+      double   : 2.06
+      double2  : 12.72
+      double4  : 9.35
+      double8  : 16.52
+      double16 : 15.90
+
+    Integer compute (GIOPS)
+      int   : 17.61
+      int2  : 5.89
+      int4  : 5.91
+      int8  : 7.35
+      int16 : 34.02
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 3.64
+      enqueueReadBuffer          : 1.54
+      enqueueMapBuffer(for read) : 125.14
+        memcpy from mapped ptr   : 1.03
+      enqueueUnmap(after write)  : 231.35
+        memcpy to mapped ptr     : 1.26
+
+    Kernel launch latency : 1159.06 us
+
+  Device: Mali-T628
+    Driver version  : 1.1 (Linux ARM)
+    Compute units   : 2
+    Clock frequency : 600 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 2.36
+      float2  : 3.84
+      float4  : 5.48
+      float8  : 6.08
+      float16 : 4.19
+
+    Single-precision compute (GFLOPS)
+      float   : 1.05
+      float2  : 2.92
+      float4  : 2.93
+      float8  : 3.61
+      float16 : 3.60
+
+    Double-precision compute (GFLOPS)
+      double   : 0.74
+      double2  : 6.67
+      double4  : 4.73
+      double8  : 8.33
+      double16 : 8.15
+
+    Integer compute (GIOPS)
+      int   : 1.68
+      int2  : 2.95
+      int4  : 2.89
+      int8  : 3.67
+      int16 : 17.25
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 4.16
+      enqueueReadBuffer          : 1.40
+      enqueueMapBuffer(for read) : 129.62
+        memcpy from mapped ptr   : 1.21
+      enqueueUnmap(after write)  : 230.65
+        memcpy to mapped ptr     : 1.11
+
+    Kernel launch latency : 600.06 us
+
