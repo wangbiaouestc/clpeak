@@ -1,0 +1,43 @@
+Platform: NVIDIA CUDA
+  Device: GeForce GT 430
+    Driver version  : 304.88 (Linux x64)
+    Compute units   : 2
+    Clock frequency : 1400 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 19.42
+      float2  : 19.86
+      float4  : 19.95
+      float8  : 10.19
+      float16 : 5.36
+
+    Single-precision compute (GFLOPS)
+      float   : 176.09
+      float2  : 262.76
+      float4  : 262.50
+      float8  : 256.40
+      float16 : 252.16
+
+    Double-precision compute (GFLOPS)
+      double   : 22.33
+      double2  : 22.31
+      double4  : 22.26
+      double8  : 22.18
+      double16 : 22.01
+
+    Integer compute (GIOPS)
+      int   : 88.85
+      int2  : 88.85
+      int4  : 88.84
+      int8  : 88.84
+      int16 : 88.84
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 4.59
+      enqueueReadBuffer          : 4.09
+      enqueueMapBuffer(for read) : 2.82
+        memcpy from mapped ptr   : 7.99
+      enqueueUnmap(after write)  : 4.28
+        memcpy to mapped ptr     : 8.23
+
+    Kernel launch latency : 5.70 us
