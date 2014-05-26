@@ -1,0 +1,43 @@
+Platform: AMD Accelerated Parallel Processing
+  Device: AMD Phenom(tm) II X4 955 Processor
+    Driver version  : 1214.3 (sse2) (Linux x64)
+    Compute units   : 4
+    Clock frequency : 3000 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 8.31
+      float2  : 10.17
+      float4  : 10.05
+      float8  : 10.22
+      float16 : 6.27
+
+    Single-precision compute (GFLOPS)
+      float   : 3.31
+      float2  : 6.59
+      float4  : 13.09
+      float8  : 26.19
+      float16 : 21.71
+
+    Double-precision compute (GFLOPS)
+      double   : 3.34
+      double2  : 6.69
+      double4  : 13.22
+      double8  : 26.21
+      double16 : 5.70
+
+    Integer compute (GIOPS)
+      int   : 6.66
+      int2  : 4.08
+      int4  : 3.38
+      int8  : 6.20
+      int16 : 5.63
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 3.34
+      enqueueReadBuffer          : 2.56
+      enqueueMapBuffer(for read) : 10694.64
+        memcpy from mapped ptr   : 4.66
+      enqueueUnmap(after write)  : 21735.66
+        memcpy to mapped ptr     : 4.44
+
+    Kernel launch latency : 26.95 us

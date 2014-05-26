@@ -1,0 +1,43 @@
+Platform: NVIDIA CUDA
+  Device: GeForce GTX 560 Ti
+    Driver version  : 304.48 (Linux x64)
+    Compute units   : 8
+    Clock frequency : 1701 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 104.37
+      float2  : 102.20
+      float4  : 103.60
+      float8  : 53.22
+      float16 : 26.89
+
+    Single-precision compute (GFLOPS)
+      float   : 862.02
+      float2  : 1287.18
+      float4  : 1285.22
+      float8  : 1252.09
+      float16 : 1234.22
+
+    Double-precision compute (GFLOPS)
+      double   : 108.70
+      double2  : 108.59
+      double4  : 108.39
+      double8  : 107.97
+      double16 : 107.13
+
+    Integer compute (GIOPS)
+      int   : 433.55
+      int2  : 433.92
+      int4  : 433.96
+      int8  : 433.63
+      int16 : 433.49
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 3.69
+      enqueueReadBuffer          : 2.86
+      enqueueMapBuffer(for read) : 1.96
+        memcpy from mapped ptr   : 4.69
+      enqueueUnmap(after write)  : 4.30
+        memcpy to mapped ptr     : 4.69
+
+    Kernel launch latency : 6.51 us
