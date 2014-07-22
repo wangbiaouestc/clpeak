@@ -1,0 +1,88 @@
+
+Platform: AMD Accelerated Parallel Processing
+  Device: Kalindi
+    Driver version  : 1411.4 (VM) (Linux x64)
+    Compute units   : 2
+    Clock frequency : 496 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 9.36
+      float2  : 9.57
+      float4  : 9.11
+      float8  : 4.91
+      float16 : 2.58
+
+    Single-precision compute (GFLOPS)
+      float   : 125.82
+      float2  : 125.79
+      float4  : 125.28
+      float8  : 124.92
+      float16 : 123.42
+
+    Double-precision compute (GFLOPS)
+      double   : 7.93
+      double2  : 7.92
+      double4  : 7.91
+      double8  : 7.90
+      double16 : 7.86
+
+    Integer compute (GIOPS)
+      int   : 25.27
+      int2  : 25.26
+      int4  : 25.26
+      int8  : 25.22
+      int16 : 25.23
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 1.95
+      enqueueReadBuffer          : 1.60
+      enqueueMapBuffer(for read) : 1931.19
+        memcpy from mapped ptr   : 0.73
+      enqueueUnmap(after write)  : 3913.05
+        memcpy to mapped ptr     : 2.10
+
+    Kernel launch latency : 85.12 us
+
+  Device: AMD A4-5000 APU with Radeon(TM) HD Graphics
+    Driver version  : 1411.4 (sse2,avx) (Linux x64)
+    Compute units   : 4
+    Clock frequency : 1500 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 3.41
+      float2  : 4.36
+      float4  : 1.60
+      float8  : 2.35
+      float16 : 2.78
+
+    Single-precision compute (GFLOPS)
+      float   : 1.28
+      float2  : 4.75
+      float4  : 5.06
+      float8  : 18.62
+      float16 : 34.91
+
+    Double-precision compute (GFLOPS)
+      double   : 0.94
+      double2  : 1.82
+      double4  : 6.78
+      double8  : 11.71
+      double16 : 4.96
+
+    Integer compute (GIOPS)
+      int   : 2.98
+      int2  : 2.34
+      int4  : 9.48
+      int8  : 16.58
+      int16 : 16.03
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 1.97
+      enqueueReadBuffer          : 1.62
+      enqueueMapBuffer(for read) : 10845.88
+        memcpy from mapped ptr   : 0.73
+      enqueueUnmap(after write)  : 22943.20
+        memcpy to mapped ptr     : 2.21
+
+    Kernel launch latency : 16.55 us
+
