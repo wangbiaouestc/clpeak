@@ -1,0 +1,56 @@
+\chapter{Survey of Latencies in Contemporary GPUs}
+
+\begin{table}
+\centering
+	\begin{tabular}{c|ccc}
+	\hline
+	\rowcolor{gray} Operation & Tesla (GT200) & Fermi (GF108) & Kepler (GK104) \\ \hline \hline
+	\multicolumn{4}{c}{\cellcolor{lightgray}Integer \& Logic} \\ \hline
+	ADD, SUB & 24 & 16 & 9 \\ \hline
+	MAX, MIN & 24 & 18 & 9 \\ \hline % 24, 34, 18
+	MAD & 120 & 22 & 9 \\ \hline
+	MUL & 96 & 20 & 9 \\ \hline
+	DIV (unsigned) & 608 & 286 & 141 \\ \hline
+	DIV (signed) & 684 & 322 & 168 \\ \hline
+	REM (unsigned) & 728 & 280 & 138 \\ \hline % sm_21: seq
+	REM (signed) & 784 & 315 & 163 \\ \hline % sm_21: seq
+	AND, OR, XOR & 24 & 16 & 9 \\ \hline
+	SHL, SHR & 24 & 18 & 9 \\ \hline
+	\_\_umul24() & 24 & 38 & 18 \\ \hline
+	\_\_mul24() & 24 & 38 & 18 \\ \hline % sm_21: seq (IMUL/BFE)
+	\_\_usad() & 24 & 20 & 9 \\ \hline
+	\_\_sad() & 24 & 20 & 9 \\ \hline
+	\_\_umulhi() & 144 & 20 & 9 \\ \hline
+	\_\_mulhi() & 180 & 20 & 9 \\ \hline
+	\rowcolor{lightgray} \multicolumn{4}{c}{\cellcolor{lightgray}32-bit Floating Point} \\ \hline
+	ADD, SUB & 24 & 16 & 9 \\ \hline
+	MAX, MIN & 24 & 20 & 9 \\ \hline % 24, 36, 18
+	MAD & 24 & 18 & 9 \\ \hline
+	MUL & 24 & 16 & 9 \\ \hline
+	DIV & 137 & 1038 & 758 \\ \hline
+	\_\_fadd\_*() & 24 & 16 & 9 \\ \hline
+	\_\_fmul\_*() & 26 & 16 & 9 \\ \hline
+	\_\_fdividef() & 52 & 95 & 41 \\ \hline
+	\_\_sinf(), \_\_cosf() & 48 & 42 & 18 \\ \hline % sm_21: seq (RRO/MUFU)
+	\_\_tanf() & 98 & 124 & 58 \\ \hline % sm_21:
+	\_\_exp2f() & 48 & 98 & 49 \\ \hline % sm_21: seq
+	\_\_expf(), \_\_exp10f() & 72 & 114 & 58 \\ \hline % sm_21: seq (RRO, MUFU, 2xFMUL, FMUL32I)
+	\_\_log2f() & 28 & 46 & 22 \\ \hline % 28, 78, 40 - 1xFADD, 1xFMUL
+	\_\_logf(), \_\_log10f() & 52 & 94 & 49 \\ \hline
+	\_\_powf() & 75 & 143 & 62 \\ \hline % sm_21: seq
+	sqrt() & 56 & 216 & 181 \\ \hline
+	rsqrt() & 28 & 78 & 40 \\ \hline
+	\rowcolor{lightgray} \multicolumn{4}{c}{\cellcolor{lightgray}64-bit Floating Point} \\ \hline
+	ADD, SUB & 48 & 38 & 33 \\ \hline
+	MAX, MIN & 48 & 38 & 33 \\ \hline % 48, 76, 66
+	MAD & 48 & 40 & 33 \\ \hline
+	MUL & 48 & 38 & 33 \\ \hline
+	DIV & 1366 & 1409 & 1128 \\ \hline
+	\_\_dadd\_rn() & 48 & 38 & 33 \\ \hline % sm21: identical to DADD
+	\rowcolor{lightgray} \multicolumn{4}{c}{\cellcolor{lightgray}Conversion (x2x)} \\ \hline
+	I2I & ? & 18 & 9 \\ \hline % ?, 34, 18
+	I2F & ? & 20 & 9 \\ \hline
+	\end{tabular}
+\caption{Latencies of math datapath operations over three generations of NVIDIA GPUs.}
+\end{table}
+

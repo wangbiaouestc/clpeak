@@ -1,0 +1,119 @@
+options:
+  --instruction: enabled
+
+Running on device "GeForce GTS 450"
+Compute    : 2.1
+Core clock : 1566 MHz
+Mem clock  : 900 MHz
+SM count   : 4
+L2$ size   : 256 KByte
+
+InstructionBenchmark: Running instruction latency benchmark ...
+Running pipeline tests ...
+Running functional unit tests ...
+  K_ADD_UINT_DEP128 latency:  528602 clocks (16.1317 clk/instruction)
+  K_RSQRT_FLOAT_DEP128 latency:  2575558 clocks (78.5998 clk/instruction)
+  K_ADD_DOUBLE_DEP128 latency:  1245732 clocks (38.0167 clk/instruction)
+
+Running uint arithmetic tests ...
+  K_ADD_UINT_DEP128 latency:  527398 clocks (16.0949 clk/instruction)
+  K_SUB_UINT_DEP128 latency:  528652 clocks (16.1332 clk/instruction)
+  K_MAD_UINT_DEP128 latency:  722470 clocks (22.048 clk/instruction)
+  K_MUL_UINT_DEP128 latency:  657750 clocks (20.0729 clk/instruction)
+  K_DIV_UINT_DEP128 latency:  9398834 clocks (286.83 clk/instruction)
+  K_REM_UINT_DEP128 latency:  9203388 clocks (280.865 clk/instruction)
+  K_MIN_UINT_DEP128 latency:  1118912 clocks (34.1465 clk/instruction)
+  K_MAX_UINT_DEP128 latency:  1118948 clocks (34.1476 clk/instruction)
+
+Running int arithmetic tests ...
+  K_ADD_INT_DEP128 latency:  528650 clocks (16.1331 clk/instruction)
+  K_SUB_INT_DEP128 latency:  528472 clocks (16.1277 clk/instruction)
+  K_MAD_INT_DEP128 latency:  722470 clocks (22.048 clk/instruction)
+  K_MUL_INT_DEP128 latency:  657718 clocks (20.072 clk/instruction)
+  K_DIV_INT_DEP128 latency:  10570840 clocks (322.596 clk/instruction)
+  K_REM_INT_DEP128 latency:  10327672 clocks (315.176 clk/instruction)
+  K_MIN_INT_DEP128 latency:  1217586 clocks (37.1578 clk/instruction)
+  K_MAX_INT_DEP128 latency:  1217258 clocks (37.1478 clk/instruction)
+  K_ABS_INT_DEP128 latency:  1118894 clocks (34.1459 clk/instruction)
+
+Running float arithmetic tests ...
+  K_ADD_FLOAT_DEP128 latency:  529136 clocks (16.1479 clk/instruction)
+  K_SUB_FLOAT_DEP128 latency:  529132 clocks (16.1478 clk/instruction)
+  K_MAD_FLOAT_DEP128 latency:  593704 clocks (18.1184 clk/instruction)
+  K_MUL_FLOAT_DEP128 latency:  528754 clocks (16.1363 clk/instruction)
+  K_DIV_FLOAT_DEP128 latency:  34035820 clocks (1038.69 clk/instruction)
+  K_MIN_FLOAT_DEP128 latency:  1183904 clocks (36.1299 clk/instruction)
+  K_MAX_FLOAT_DEP128 latency:  1183944 clocks (36.1311 clk/instruction)
+
+Running double arithmetic tests ...
+  K_ADD_DOUBLE_DEP128 latency:  1245732 clocks (38.0167 clk/instruction)
+  K_SUB_DOUBLE_DEP128 latency:  1245732 clocks (38.0167 clk/instruction)
+  K_MAD_DOUBLE_DEP128 latency:  1310756 clocks (40.0011 clk/instruction)
+  K_MUL_DOUBLE_DEP128 latency:  1245732 clocks (38.0167 clk/instruction)
+  K_DIV_DOUBLE_DEP128 latency:  46188294 clocks (1409.55 clk/instruction)
+  K_MIN_DOUBLE_DEP128 latency:  2490916 clocks (76.0167 clk/instruction)
+  K_MAX_DOUBLE_DEP128 latency:  2490916 clocks (76.0167 clk/instruction)
+
+Running logic tests ...
+  K_AND_UINT_DEP128 latency:  528600 clocks (16.1316 clk/instruction)
+  K_OR_UINT_DEP128 latency:  528606 clocks (16.1318 clk/instruction)
+  K_XOR_UINT_DEP128 latency:  10294 clocks (0.314148 clk/instruction)
+  K_SHL_UINT_DEP128 latency:  593226 clocks (18.1038 clk/instruction)
+  K_SHR_UINT_DEP128 latency:  593204 clocks (18.1031 clk/instruction)
+
+Running intrinsic int arithmetic tests ...
+  K_UMUL24_UINT_DEP128 latency:  1249764 clocks (38.1398 clk/instruction)
+  K_MUL24_INT_DEP128 latency:  1249952 clocks (38.1455 clk/instruction)
+  K_UMULHI_UINT_DEP128 latency:  657730 clocks (20.0723 clk/instruction)
+  K_MULHI_INT_DEP128 latency:  657754 clocks (20.0731 clk/instruction)
+  K_USAD_UINT_DEP128 latency:  657726 clocks (20.0722 clk/instruction)
+  K_SAD_INT_DEP128 latency:  657750 clocks (20.0729 clk/instruction)
+
+Running intrinsic float arithmetic tests ...
+  K_FADD_RN_FLOAT_DEP128 latency:  529278 clocks (16.1523 clk/instruction)
+  K_FADD_RZ_FLOAT_DEP128 latency:  529100 clocks (16.1469 clk/instruction)
+  K_FMUL_RN_FLOAT_DEP128 latency:  528572 clocks (16.1307 clk/instruction)
+  K_FMUL_RZ_FLOAT_DEP128 latency:  528566 clocks (16.1306 clk/instruction)
+  K_FDIVIDEF_FLOAT_DEP128 latency:  3135564 clocks (95.6898 clk/instruction)
+
+Running intrinsic double arithmetic tests ...
+  K_DADD_RN_DOUBLE_DEP128 latency:  1245732 clocks (38.0167 clk/instruction)
+
+Running special float arithmetic tests ...
+  K_RCP_FLOAT_DEP128 latency:  7366034 clocks (224.794 clk/instruction)
+  K_SQRT_FLOAT_DEP128 latency:  7089534 clocks (216.355 clk/instruction)
+  K_RSQRT_FLOAT_DEP128 latency:  2575528 clocks (78.5989 clk/instruction)
+  K_SIN_FLOAT_DEP128 latency:  26871642 clocks (820.057 clk/instruction)
+  K_COS_FLOAT_DEP128 latency:  26278484 clocks (801.956 clk/instruction)
+  K_TAN_FLOAT_DEP128 latency:  27723486 clocks (846.054 clk/instruction)
+  K_EXP_FLOAT_DEP128 latency:  8979390 clocks (274.029 clk/instruction)
+  K_EXP10_FLOAT_DEP128 latency:  8641748 clocks (263.725 clk/instruction)
+  K_LOG_FLOAT_DEP128 latency:  13457672 clocks (410.696 clk/instruction)
+  K_LOG2_FLOAT_DEP128 latency:  13731742 clocks (419.06 clk/instruction)
+  K_LOG10_FLOAT_DEP128 latency:  13727932 clocks (418.943 clk/instruction)
+  K_POW_FLOAT_DEP128 latency:  24201450 clocks (738.57 clk/instruction)
+
+Running intrinsic special float arithmetic tests ...
+  K_SINF_FLOAT_DEP128 latency:  1378034 clocks (42.0543 clk/instruction)
+  K_COSF_FLOAT_DEP128 latency:  1378062 clocks (42.0551 clk/instruction)
+  K_TANF_FLOAT_DEP128 latency:  4090630 clocks (124.836 clk/instruction)
+  K_EXPF_FLOAT_DEP128 latency:  3753342 clocks (114.543 clk/instruction)
+  K_EXP2F_FLOAT_DEP128 latency:  3231522 clocks (98.6182 clk/instruction)
+  K_EXP10F_FLOAT_DEP128 latency:  3753352 clocks (114.543 clk/instruction)
+  K_LOGF_FLOAT_DEP128 latency:  3103794 clocks (94.7203 clk/instruction)
+  K_LOG2F_FLOAT_DEP128 latency:  2575596 clocks (78.601 clk/instruction)
+  K_LOG10F_FLOAT_DEP128 latency:  3103774 clocks (94.7197 clk/instruction)
+  K_POWF_FLOAT_DEP128 latency:  4692696 clocks (143.21 clk/instruction)
+
+Running x2x tests ...
+  K_INTASFLOAT_UINT_DEP128 latency:  657730 clocks (20.0723 clk/instruction)
+  K_FLOATASINT_FLOAT_DEP128 latency:  657738 clocks (20.0726 clk/instruction)
+
+Running misc intrinsic tests ...
+  K_POPC_UINT_DEP128 latency:  722974 clocks (22.0634 clk/instruction)
+  K_CLZ_UINT_DEP128 latency:  1118824 clocks (34.1438 clk/instruction)
+
+Running warp arithmetic tests ...
+  K_ALL_UINT_DEP128 latency:  4011478 clocks (122.421 clk/instruction)
+  K_ANY_UINT_DEP128 latency:  4011458 clocks (122.42 clk/instruction)
+

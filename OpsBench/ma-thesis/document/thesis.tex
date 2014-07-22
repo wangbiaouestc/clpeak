@@ -1,0 +1,109 @@
+\documentclass{tu-thesis}
+
+\newlength{\mytablewidth}
+
+\usepackage{babel}
+
+% Unicode support
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+% Font encoding and family
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % 'helvet' is a recommended alternative
+
+\usepackage[inner=2.5cm, outer=2.5cm, lines=44, top=2.5cm, includeheadfoot]{geometry}% RT
+
+\usepackage{amsmath,amssymb} % zusaetzliche Matheumgebungen (align) + Mathe-Symbole
+
+% Abk\"urzungsverzeichnis
+\usepackage[intoc]{nomencl}
+\setlength{\nomlabelwidth}{2cm} %Breit f\"ur den Abkürzungsteil
+\makenomenclature
+
+\usepackage{booktabs} % Befehle fuer besseres Tabellenlayout
+\usepackage{longtable} % umbrechbare Tabellen
+\usepackage{array} % noch besseres Tabellenlayout
+\usepackage[textwidth=1.75cm]{todonotes}% F\"ur Korrekturhinweise
+\usepackage{icomma} % Abstandskorrektur fuer , als Dezimaltrenner
+\usepackage{listingsutf8}% Code-Examples %TODO Hinweis Latin 1
+
+\usepackage{color}
+\usepackage{colortbl}
+
+\definecolor{gray}{rgb}{0.8,0.8,0.8}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+
+\usepackage{splitidx}%% Hilfspaket zum Erstellen eines Index
+\usepackage{nicefrac}
+\makeindex 
+
+\usepackage[pdfstartview=FitH,%
+            plainpages=false,%
+	    	bookmarksopen=true,%
+	    	bookmarksnumbered=true,%
+			colorlinks=false,%
+			pdfborder={0 0 0}]{hyperref}
+
+
+
+%%%
+
+\author{Michael Andersch}
+\title{A Study of Latencies in a Throughput Processor}
+\date{\today}
+%
+
+\matricul{319346}
+%
+\courseofstudy{Computer Engineering}
+\degree{Master of Science }
+
+%%Pruefungsordnung (Datum?)
+\dpoversion{05.01.2005}
+%%Gutachter
+\referees{Prof. Dr. B. Juurlink, \thechair}
+%%Betreuer
+\supervisor{Dipl.-Ing.\ J. Lucas, \thechair \\
+Dr.-Ing. M. Alvarez-Mesa, \thechair}
+%%Diplomarbeitszeitraum
+\thesistime{01.01.2014 - 30.06.2014}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+% Include german and english abtracts in correct order; contents shall be
+% placed into inc/abstract-de.tex and inc/abstract-en.tex, respectively.
+\abstracts
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+
+\include{./inc/00-front}
+\mainmatter 
+\include{./inc/01-intro}
+\include{./inc/03-survey}
+\bibliography{bib/article,%
+				bib/booklet,%
+				bib/inbook,%
+				bib/inproceedings,%
+				bib/misc,%
+				bib/phdthesis,%
+				bib/technicalreport,%
+				bib/book,%
+				bib/conference,%
+				bib/incollection,%
+				bib/manual,%
+				bib/mscthesis,%
+				bib/proceedings,%
+				bib/unpublished}
+\printindex 
+\include{./inc/thanks}
+
+
+\end{document}

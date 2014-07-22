@@ -1,0 +1,76 @@
+== Benchmarking the C2070 ==
+
+A Project by Ryan Meltzer and Chi Zeng
+CS205, Fall 2012
+
+Our mission is to determine the intricacies of the C2070 such as details 
+associated with caching and the order in which threads execute conditional
+branches in the kernel. Towards this end, we wrote the following scripts. We 
+analyze the raw results on our website in detail.
+
+= stride.py =
+Usage: python stride.py output_file_name
+This file varied the array size and the stride length. It outputed a file 
+containing the latency corresponding to these configurations. We also allowed 
+this file to turn the L1 and/or L2 caches on and off. Plotting this data allowed
+us to obtain the sizes of various caches on the C2070.
+
+= stride_plot.py =
+Usage: python stride_plot.py stride.py_data_file_name
+This file plots the latency per stride length graphs for various array sizes.
+After we plotted this data, we figured out the sizes and latencies of various 
+caches.
+
+= multi_stride.py =
+Usage: python multi_stride.py output_file_name
+This file tests for what happens when many threads access the same L2 cache. It
+varies the number of threads and the stride length.
+
+= multi_plot.py =
+Usage: python mutli_plot.py multi_stride.py_data_file_name
+This file plots the latency per stride length graphs for various number of
+concurrently running threads.  This was used to demonstrate that we can see
+L2 performance degrade as the number of threads running (each using different,
+though identical arrays) increased. This verifies that the L2 cache is shared.
+
+= lines.py =
+Usage: python lines.py
+Alt. usage: the calc method could be imported and called with any desired parameters
+This file calculates the size of the working set.  It was used to help us verify
+that latency dips as stride increases coincide with decreases in the actual working
+set size.  
+
+= syncthreads.py =
+Usage: python syncthreads.py
+When __syncthreads() is not used as specified by Nvidia, incorrect behavior can 
+result.  This is an example of a kernel that appears logically sound but will
+nonetheless fail with high probability (it could get lucky) because of the way
+__syncthreads() works when there is thread divergence.
+
+= conditional_full_ordering.py =
+Usage: python conditional_full_ordering.py
+This file determines the order in which conditional branches are executed on the
+GPU. It generates permutations of indices that are associated with 
+conditional branches. If any orderings result in execution that is not from top-to-
+bottom, it will say so, else it will just print that the ordering followed this pattern. 
+
+= conditional_grouping.py =
+Usage: python conditional_grouping.py
+This file was used to mimic more closely the condition in our reduction kernel, 
+so we might better understand why it fails.  We noted upon running it that the 
+write performed by low-index threads appears always to be the one that persists, 
+so, if run, it will simply print that everything was as expected if it was, and 
+will flag any unexpected outputs as well. It demonstrates that threadIdx can have
+an impact one behavior.
+
+= associativity.py =
+Usage: python associativity.py output_file_name
+This file attempts to find how the cache is layed out. Specifically, it attempts
+to determine the cache structure of the C2070 by varying the array size while using
+a small, constant stride length that ensures all lines of data will be read.
+
+== associativity_plot.py
+Usage: python associativity.py associativity.py_data_file_name
+This file plots the latency over the array size data. We use this data to 
+determine the associativity/structure of the cache.
+

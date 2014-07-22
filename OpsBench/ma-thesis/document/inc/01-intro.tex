@@ -1,0 +1,32 @@
+ \chapter{Introduction}
+Diese Diplomarbeitsvorlage basiert auf der von Simon Dreher. Wichtige Hinweise sind der Dokumentation zu entnehmen, die sich im Unterverzeichnis \textsl{doc} befindet. Zum derzeitigen Zeitpunkt ist diese jedoch noch unvollst"andig. 
+
+Bei der Gliederung dieser Vorlage handelt es sich lediglich um einen Vorschlag, der dem \textsl{Diplom-Guide} entnommen ist. Die einzelnen Kapitel k"onnen selbstverst"andlich dem individuellen Geschmack und dem Inhalt angepasst werden.
+
+\section{Related Work}
+
+In this section, an overview over previous work related to the research leading to this thesis is given. As this thesis touches on multiple topics, this overview is divided into multiple subsections for clarity. Overall, the related work is divided into research about processor microbenchmarking, GPU application analyses, and low-latency GPU microarchitecture.
+
+\subsection{Processor Microbenchmarking}
+
+In the branch of utilizing low-level microbenchmarks to determine hardware properties such as cache sizes or pipeline lengths, there is a rich body of work concerned with analyzing \textit{CPU architectures}.
+
+TBD
+
+Beyond the analysis of CPU microarchitectures, the field of microbenchmarking GPUs has only emerged in recent years. Where even designers and chip architects are mostly concerned with building high-throughput designs, however, the analysis of latencies in GPUs has received little attention.
+
+Perhaps the most widely known analysis of a GPU design using microbenchmarks has been performed by Wong et al.~\cite{wong:gt200microbenchmark}. In their work, the authors extensively studied the NVIDIA GT200 GPU based on the Tesla architecture. Properties analyzed include the parameters of the various caches, instruction latencies and throughputs, branch path ordering, and CTA synchronization latencies. In the time since the release of the GT200 GPU, however, GPU design has become much more compute-heavy, including sophisticated caches and new instructions, therefore calling for an analysis similar to that of Wong et al., but for more recent GPU devices.
+
+One piece of work that addresses this need has been done by R. Meltzer and C. Zeng~\cite{meltzer:c2070} through an analysis of the Tesla C2070 featuring a Fermi architecture GF100 chip. In the study, the authors focus exclusively on determining data cache parameters such as latencies, associativities, and overall cache sizes. No analysis of other architectural latencies such as instruction latencies is given, and the analysis results are not compared to any other GPU architecture or chip.
+
+AMD microbenchmark suite
+
+CPU microbenchmarking
+
+\subsection{Analysis of Heterogeneous Applications}
+
+TBD
+
+\subsection{Low-Latency GPU Microarchitecture}
+
+TBD
