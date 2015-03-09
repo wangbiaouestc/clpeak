@@ -1,0 +1,76 @@
+
+Platform: Intel(R) OpenCL
+  Device:        Intel(R) Core(TM) i5-2500K CPU @ 3.30GHz
+    Driver version  : 1.2.0.83073 (Linux x64)
+    Compute units   : 4
+    Clock frequency : 3300 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 15.13
+      float2  : 15.22
+      float4  : 16.40
+      float8  : 16.86
+      float16 : 15.52
+
+    Single-precision compute (GFLOPS)
+      float   : 10.07
+      float2  : 39.96
+      float4  : 81.30
+      float8  : 35.19
+      float16 : 38.61
+
+    Double-precision compute (GFLOPS)
+      double   : 10.18
+      double2  : 39.55
+      double4  : 16.61
+      double8  : 12.67
+      double16 : 40.30
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 2.67
+      enqueueReadBuffer          : 5.88
+      enqueueMapBuffer(for read) : 3434.87
+        memcpy from mapped ptr   : 5.75
+      enqueueUnmap(after write)  : 33979.17
+        memcpy to mapped ptr     : 5.84
+
+    Kernel launch latency : 3.26 us
+
+
+Platform: NVIDIA CUDA
+  Device: GeForce GTX 750 Ti
+    Driver version  : 343.36 (Linux x64)
+    Compute units   : 5
+    Clock frequency : 1150 MHz
+
+    Global memory bandwidth (GBPS)
+      float   : 72.85
+      float2  : 75.77
+      float4  : 77.43
+      float8  : 75.50
+      float16 : 73.52
+
+    Single-precision compute (GFLOPS)
+      float   : 940.30
+      float2  : 1201.65
+      float4  : 1446.91
+      float8  : 1446.58
+      float16 : 1433.97
+
+    Double-precision compute (GFLOPS)
+      double   : 48.19
+      double2  : 48.13
+      double4  : 48.04
+      double8  : 47.85
+      double16 : 47.47
+
+    Transfer bandwidth (GBPS)
+      enqueueWriteBuffer         : 6.54
+      enqueueReadBuffer          : 6.06
+      enqueueMapBuffer(for read) : 6.18
+        memcpy from mapped ptr   : 5.88
+      enqueueUnmap(after write)  : 6.74
+        memcpy to mapped ptr     : 5.89
+
+    Kernel launch latency : 2.69 us
+
